@@ -1,7 +1,8 @@
 # CSE151A_Group_Project_SII25
 The data and code for the CSE151A group project
 
-**SETUP**
+# SETUP
+
 Data for project is on [kaggle](https://www.kaggle.com/datasets/sherrytp/airline-delay-analysis). A kaggle account with API key is required. It must be downloaded and unzipped into Colab Notebook session.
 
 
