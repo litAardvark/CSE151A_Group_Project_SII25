@@ -9,11 +9,11 @@ Data for project is on [kaggle](https://www.kaggle.com/datasets/sherrytp/airline
 # Submission 2 questions
 **1. How many observations does your dataset have?**
 
- /
+ For simplicity, we will only look at airline delay info for the year 2018, which has exactly 7,213,446 observations.
  
 **2. Describe all columns in your dataset their scales and data distributions. Describe the categorical and continuous variables in your dataset. Describe your target column and if you are using images plot some example classes of the images.**
 
- /
+ 
 
 **3. Do you have missing and duplicate values in your dataset?**
 
