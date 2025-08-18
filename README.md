@@ -69,7 +69,7 @@ _LATE_AIRCRAFT_DELAY_ : minutes due to late inbound plane (continuous). Distribu
 
 **3. Do you have missing and duplicate values in your dataset?**
 
- There is a significant number of missing data. This includes some of the some of the feature columns crucial to our target.
+ There is a significant number of missing data. This includes some of the feature columns we deem crucial to our target.
 
 **4. Note: For image data you can still describe your data by the number of classes, size of images, are sizes uniform? Do they need to be cropped? normalized? etc.**
 
@@ -78,7 +78,7 @@ Some columns are categorical data, including date/time, that will require encodi
 **6. How will you preprocess your data? Handle data imbalance if needed. You should only explain (do not perform pre-processing as that is in MS3) this in your README.md file and link your Jupyter notebook to it. All code and  Jupyter notebooks have be uploaded to your repo.**
 
 Some of the columns in the raw data will be dropped since they are irrelevant to the purpose of the model.
-Missing data will be replaced with synthetic data computed from information available, if not possible to compute those values, they will be replaced with zeros. Categorical and date/time data will be encoded. Our target feature. Since this is a regression model, we do not anticipate significant issues with data imbalances, but we have enough data points to be able to drop rows for balancing purposes if necessary.
+Missing data will be replaced with synthetic data computed from information available, if not possible to compute those values, they will be replaced with zeros. Categorical and date/time data will be encoded. Since this is a regression model, we do not anticipate significant issues with data imbalances, but we have enough data points to be able to drop rows for balancing purposes if necessary.
 
 **7. You must also include in your Jupyter Notebook, a link for data download and environment setup requirements**
 
