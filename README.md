@@ -13,7 +13,59 @@ Data for project is on [kaggle](https://www.kaggle.com/datasets/sherrytp/airline
  
 **2. Describe all columns in your dataset their scales and data distributions. Describe the categorical and continuous variables in your dataset. Describe your target column and if you are using images plot some example classes of the images.**
 
- 
+ _FL_DATE_ — date. Distribution: flat distribution.
+
+_OP_CARRIER_ — airline code (category). Distribution: some airlines show up more often.
+
+_OP_CARRIER_FL_NUM_ — flight number (category). Distribution: some flight numbers show up the most.
+
+_ORIGIN_ — origin airport code (category). Distribution: 90% unique airport codes.
+
+_DEST_ — destination airport code (category). Distribution: 90% mostly unique.
+
+_CRS_DEP_TIME_ — scheduled departure time (continuous). Distribution: most popular departure times are either morning or afternoon.
+
+_DEP_TIME_ — actual departure time (continuous). Distribution: extremely inconsistent pattern.
+
+_DEP_DELAY_ — minutes late/early at departure (continuous). Distribution: Most flights depart early.
+
+_TAXI_OUT_ — minutes from gate pushback to takeoff (continuous). Distribution: Most flights have values 8-16 minutes.
+
+_WHEELS_OFF_ — takeoff time (continuous). Distribution: extremely inconsistent pattern.
+
+_WHEELS_ON_ — touchdown time (continuous). Distribution: extremely inconsistent pattern.
+
+_TAXI_IN_ — minutes from touchdown to gate (continuous). Distribution: Minutes are mostly within 1-6
+
+_CRS_ARR_TIME_ — scheduled arrival time (continuous). Distribution: extremely inconsistent pattern
+
+_ARR_TIME_ — actual arrival time (continuous). Distribution: extremely inconsistent pattern
+
+_ARR_DELAY_ — minutes late/early at the arrival gate (continuous). Distribution: Delays mostly range between ~50 minutes late to 1 hour early
+
+_CANCELLED_ — 0/1 (category). Distribution: less than 2% are cancelled
+
+_CANCELLATION_CODE_ — reason A/B/C/D (category and only for cancelled). Distribution: 98% empty values
+
+_DIVERTED_ — 0/1 (category). Distribution: less than 1% flights diverted
+
+_CRS_ELAPSED_TIME_ — planned gate-to-gate minutes (continuous). Distribution: Most values range roughly between 1 to 2 hours
+
+_ACTUAL_ELAPSED_TIME_ — actual gate-to-gate minutes (continuous). Distribution: Most values also roughly range between 1 to 2 hours
+
+_AIR_TIME_ — minutes in the air (continuous). Distribution: Most flights in the air range between 40 minutes to 1.5 hours
+
+_DISTANCE_ — miles between airports (continuous). Distribution: most flights travel on average 800 miles
+
+_CARRIER_DELAY_ — minutes attributed to airline (continuous). Distribution: Average time is 20 minutes
+
+_WEATHER_DELAY_ — minutes due to weather (continuous). Distribution: Average time is 3.64 minutes
+
+_NAS_DELAY_ — minutes due to airspace/ATC/volume (continuous). Distribution: Average time is 15.9 minutes
+
+_SECURITY_DELAY_ — minutes due to security (continuous,). Distribution: Average time is 0.09 minutes
+
+_LATE_AIRCRAFT_DELAY_ — minutes due to late inbound plane (continuous). Distribution: Average time is 25.6 minutes
 
 **3. Do you have missing and duplicate values in your dataset?**
 
