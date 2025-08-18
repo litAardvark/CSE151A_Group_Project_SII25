@@ -67,6 +67,9 @@ _SECURITY_DELAY_ : minutes due to security (continuous). Distribution: Average t
 
 _LATE_AIRCRAFT_DELAY_ : minutes due to late inbound plane (continuous). Distribution: Average time is 25.6 minutes
 
+_Target Column: ARR_DELAY (Arrival delay)_
+Our dataset only contains numerical data and no images.
+
 **3. Do you have missing and duplicate values in your dataset?**
 
  There is a significant number of missing data. This includes some of the feature columns we deem crucial to our target.
