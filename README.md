@@ -63,7 +63,7 @@ _WEATHER_DELAY_ : minutes due to weather (continuous). Distribution: Average tim
 
 _NAS_DELAY_ : minutes due to airspace/ATC/volume (continuous). Distribution: Average time is 15.9 minutes
 
-_SECURITY_DELAY_ : minutes due to security (continuous,). Distribution: Average time is 0.09 minutes
+_SECURITY_DELAY_ : minutes due to security (continuous). Distribution: Average time is 0.09 minutes
 
 _LATE_AIRCRAFT_DELAY_ : minutes due to late inbound plane (continuous). Distribution: Average time is 25.6 minutes
 
