@@ -77,7 +77,7 @@ Some columns are categorical data, including date/time, that will require encodi
 
 **6. How will you preprocess your data? Handle data imbalance if needed. You should only explain (do not perform pre-processing as that is in MS3) this in your README.md file and link your Jupyter notebook to it. All code and  Jupyter notebooks have be uploaded to your repo.**
 
-Some of the columns in the raw data will be dropped since they are irrelevant to the purpose of the model.
+Some of the columns in the raw data will be dropped since they are irrelevant or redundant to the purpose of the model.
 Missing data will be replaced with synthetic data computed from information available, if not possible to compute those values, they will be replaced with zeros. Categorical and date/time data will be encoded. Since this is a regression model, we do not anticipate significant issues with data imbalances, but we have enough data points to be able to drop rows for balancing purposes if necessary.
 
 **7. You must also include in your Jupyter Notebook, a link for data download and environment setup requirements**
