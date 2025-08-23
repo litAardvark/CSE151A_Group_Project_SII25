@@ -11,7 +11,12 @@
 - Fill in missing categoricals with mode
 - Fill in missing numerical data with mean
 - Scaling numerical data using z-scoring
-- Shuffle & subset data to size 500,000 rows
+- Shuffle & subset data to size 500,000 rows:
+  -    500000 / 7213446 = 0.069
+    ```
+ 
+  feature_df.sample(frac=0.069).reset_index(drop=True)
+  ```
 ## Training Model 
 - Will train on a subset of size  including only numerical data for Milestone 3 since we are on a time crunch
 
