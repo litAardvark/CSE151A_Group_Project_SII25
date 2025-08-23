@@ -10,7 +10,7 @@
 - Fill in missing categoricals with mode
 - Fill in missing numerical data with mean
 - Scaling numerical data using z-scoring
-- Subset data to size 500,000 rows
+- Shuffle & subset data to size 500,000 rows
 ## Training Model 
 - Will train on a subset of size  including only numerical data for Milestone 3 since we are on a time crunch
 
