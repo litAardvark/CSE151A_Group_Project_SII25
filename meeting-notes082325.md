@@ -5,6 +5,7 @@
 - Jason will run all of our code through SDSC, use small subset of data when working locally
 - We are allowed to use imports for everything !!!
 - We are basing all of this on ```feature_df``` in our code
+- Rosario & DQ let each other know when done to work on actual model training algorithm
 ## Data Preprocessing
 - Encoding time data cyclically as floats using sin() 
 - 1-hot encoding categoricals for use in future submission 
@@ -22,8 +23,8 @@
 
 ## Division of Labor 
 - Jason: Running code on SDSC
-- DQ:Preprocessing (z-scoring, filling in missing numericals, encoding time data) 
-- Rosario:Preprocessing  (Filling in categorical stuff) 
+- DQ:Preprocessing (z-scoring, filling in missing numericals, encoding time data), Training on teeny tiny subset (100k rows) 
+- Rosario:Preprocessing  (Filling in categorical stuff), Training on teeny tiny subset (100k rows)
 - Sam: Writing
   
 
