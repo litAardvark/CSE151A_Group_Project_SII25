@@ -3,7 +3,8 @@
 - Predict ARR_DELAY (# minutes plane is delayed on arrival) using Support Vector Regression (SVR)
 ## General 
 - Jason will run all of our code through SDSC, use small subset of data when working locally
-- We are allowed to use imports for everything !!! 
+- We are allowed to use imports for everything !!!
+- We are basing all of this on ```feature_df``` in our code
 ## Data Preprocessing
 - Encoding time data cyclically as floats using sin() 
 - 1-hot encoding categoricals for use in future submission 
