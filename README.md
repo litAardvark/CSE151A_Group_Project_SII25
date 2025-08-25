@@ -85,3 +85,35 @@ Missing data will be replaced with synthetic data computed from information avai
 
 **7. You must also include in your Jupyter Notebook, a link for data download and environment setup requirements**
 
+# Milestone 3 questions
+**1. Where does your model fit in the fitting graph? (Build at least one model with different hyperparameters and check for over/underfitting, pick the best model).**
+
+We ran two SVR models with different hyperparameters:
+
+model 1: 
+```SVR(kernel='linear', C=5, epsilon=0.001)```
+
+model 2: 
+```SVR(kernel='linear', C=50, epsilon=0.1)```
+
+Both models achieve high training and testing $R^2$ of ~0.92 with small differences. This shows that the models are not underfitting since the variance explained is high. It also shows no overfitting since the test performance is very close to training performance of the models.
+
+
+Between the two models, model 2 with higher (stricter) C parameter and the looser epsilon has slightly higher performance on the test data, while not super significant, we could say it is the better model.
+
+ 
+**2.What are the next models you are thinking of and why?**
+
+The most obvious model to try on this data would be decision tree based models. Our dataset has a mixed data types, categorical features such as ORIGIN, DEST, OP_CARRIER and numerical features such as DISTANCE, CRS_DEPART_TIME, etc. Decision trees are good at mixing numerical values with thresholds and categorical values.
+
+Most importantly decision trees could allow us to capture possible non-linear relationships which could be valuable in our analysis because flight delays can be influenced by combinations of factors. Perhaps specifically flights from LAX on weekends are often delayed, SVR captures linear relationships but a decision tree could model non-linear and combinations of factors more effectively.
+
+**3. Conclusion section: What is the conclusion of your first model? What can be done to possibly improve it?**
+
+Our first SVR model achieved high performance (Train $R^2 \approx 0.92$ and Test $R^2 \approx 0.93$) so the model is quite accurate and is not overfitting or underfitting. This means that the flight delay outcome can be predicted quite accurately using the features in our dataset such as origin, distance, carrier, etc.
+
+To further improve the model we could try the following:
+- Train on more of the dataset (more computationally intensive)
+- Tune the hyperparameters using cross-validation to dial in optimal C, epislon, and Kernel choice.
+- Add more features such as weather at origin and destination, whether certain dates are holidays
+- Try non-SVR models such as decision trees as previously mentioned
