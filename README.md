@@ -117,3 +117,52 @@ To further improve the model we could try the following:
 - Tune the hyperparameters using cross-validation to dial in optimal C, epislon, and Kernel choice.
 - Add more features such as weather at origin and destination, whether certain dates are holidays
 - Try non-SVR models such as decision trees as previously mentioned
+
+- # CSE 151A Final Project
+
+### 0.1. Intro: Why was it chosen? Why is it cool? Discuss the general/broader impact of having a good predictive mode. i.e. why is this important? (3 points)
+
+Flight delays frequently spoil travel plans for even the savviest of flyers. Late landings, inclement weather, and other emergencies are inevitable. Itineraries that accurately account for delays stand to ease a major pain point for travelers on commercial airlines. Our project seeks to address this problem by predicting the length of flight delays using machine learning. 
+
+Your report should include relevant figures of your choosing to help with the narration of your story, including legends (similar to a scientific paper). For reference you search machine learning and your model in google scholar for reference examples. (3 points)
+
+### 0.2. Methods: This section will include the exploration results, preprocessing steps, models chosen in the order they were executed. You should also describe the parameters chosen. Please make sub-sections for every step. i.e Data Exploration, Preprocessing, Model 1, Model 2, additional models are optional. Please note that models can be the same i.e. DNN but different versions of it if they are distinct enough. Changes can not be incremental. You can put links here to notebooks and/or code blocks using three ` in markup for displaying code. so it would look like this: ``` MY CODE BLOCK ```
+
+#### 0.2.1. Data Exploration
+
+Our exploratory data analysis revealed a broad dataset, including many airlines traveling all distances at all times of day from many cities of origin. 
+
+Distinct carriers showed some of the more marked differences. A few were outliers in terms of both delay and spread of flight dates. There were also large differences in popularity between airlines as proportion of flights. Without closer investigation, we assume this is explained by resource difference between carriers (e.g. international airlines vs small regional carriers). 
+
+Similarly, flights from a subset of origins and destinations had significantly longer flight times and distances than all others. This is likely due to the designation of international airports. 
+
+Distance had a slight positive correlation with departure delay, and a negative one with arrival delay. Given the small magnitude and contradictory nature of this correlation, it's unlikely to be meaningful for our overall analysis. 
+
+All in all, various features of the dataset showed interesting relationships, but none appeared very influential on arrival delay, our variable of interest. 
+
+### 0.3. Preprocessing Steps
+
+Data reduction
+
+Handling missing values (categorical &amp; numerical) 
+
+1-hot encoding
+
+Encoding time &amp; date cyclically 
+
+Z-scoring 
+
+*Note: A methods section does not include any why. the reason why will be in the discussion section. This is just a summary of your methods (5 points)*
+
+### 0.4. Results: This will include the results from the methods listed above (C). You will have figures here about your results as well. No exploration of results is done here. This is mainly just a summary of your results. The sub-sections will be the same as the sections in your methods section. (5 points)
+
+#### 0.4.1. Discussion: This is where you will discuss the why, and your interpretation and your though process from beginning to end. This will mimic the sections you have created in your methods section as well as new sections you feel you need to create. You can also discuss how believable your results are at each step. You can discuss any short comings. It's ok to criticize as this shows your intellectual merit, as to how you are thinking about things scientifically and how you are able to correctly scrutinize things and find short comings. In science we never really find the perfect solution, especially since we know something will probably come up int he future (i.e. donkeys) and mess everything up. If you do it's probably a unicorn or the data and model you chose are just perfect for each other! (3 points)
+
+#### 0.4.2.  Conclusion: This is where you do a mind dump on your opinions and possible future directions. Basically what you wish you could have done differently. Here you close with final thoughts. (3 points)
+
+### 0.5. Statement of Contribution by each member. This will be taken into consideration when making the final grade for each member in the group. Did you work as a team? was there a team leader? project manager? coding? writer? etc. Please be truthful about this as this will determine individual grades in participation. There is no job that is better than the other. If you did no code but did the entire write up and gave feedback during the steps and collaborated then you would still get full credit. If you only coded but gave feedback on the write up and other things, then you still get full credit. If you managed everyone and the deadlines and setup meetings and communicated with teaching staff only then you get full credit. Every role is important as long as you collaborated and were integral to the completion of the project. If the person did nothing. they risk getting a big fat 0. Just like in any job, if you did nothing, you have the risk of getting fired. Teamwork is one of the most important qualities in industry and academia! 
+
+Rosario Ortiz: Note-taking, facilitating meeting, writing, some code
+
+
+
