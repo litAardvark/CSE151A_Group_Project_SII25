@@ -142,7 +142,7 @@ All in all, various features of the dataset showed interesting relationships, bu
 
 ### 0.3. Preprocessing Steps
 
-Our dataset, which initially contained about 7,000,000 rows of data, was sampled down to about 500,000 rows using pandas' `Dataframe.sample(frac=0.0069, random_state=42)`.
+Our dataset, which initially contained about 7,000,000 rows of data, was sampled down to about 500,000 rows using pandas' `Dataframe.sample(frac=0.07, random_state=42)`.
 
 Missing values were imputed with different methods for categorical and numerical features. For numerical features, missing values were replaced with the mean. 
 
