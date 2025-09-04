@@ -130,7 +130,23 @@ Your report should include relevant figures of your choosing to help with the na
 
 #### 0.2.1. Data Exploration
 
-Methods used: 
+For the exploratory data analysis section, we began by examining the overall structure and contents of the flights dataset. We inspected the number of rows and columns, the data types of each feature, and generated descriptive statistics for both numerical and categorical variables.
+
+We checked for duplicates, empty cells, missing data using pandas methods such as:
+```
+df.isnull().sum()
+df.duplicated().sum()
+```
+
+
+We ran some exploratory visualizations on the data including a heatmap on the numerical columns with the following code. ```sns.heatmap(feature_df[numerical_cols],
+            annot=True,
+            linewidth=.5,
+            cmap = sns.color_palette("magma", as_cmap=True)```
+
+
+Finally, we used generated a Seaborn pairplot on some explanatory features.
+```sns.pairplot(pd.concat(concatenated_df[features], target_df))```
 
 #### 0.2.2. Preprocessing Steps
 
