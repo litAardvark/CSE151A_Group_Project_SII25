@@ -226,6 +226,15 @@ Likewise, variation in the proportion of flights overseen by different carriers 
 
 Furthermore, variations in flight distance and durations by origin and destination city are likely due to the designation of international airports. 
 
+Despite this, our initial data exploration phase influenced our model choices, particularly as we learned additional model types throughout the class.
+#### 0.4.2. Model 1 
+
+Informed by our data exploration and visualization, we first decided to use a regression type classification model (SVR) on our dataset. The SVR training resulted in a very strong model. However, we found we were likely not getting enough information out of the categorical data. Furthermore, we found the SVR model to be very computationally expensive. As a result, we had to limit the size of our training dataset, harming the accuracy of the model. Furthermore, the very high r-squared value (approx. 0.93) suggests that some training features could be overly correlated with the output variable. For example, departure delay (DEP_DELAY) is directly linearly related to our target feature arrival delay (ARR_DELAY). If one feature has so much explanatory power, our SVR model may assign it excessive weight. 
+
+#### 0.4.3 Model 2
+
+For our next model, we wanted to explore using some unsupervised clustering approaches to mitigate this issue with our SVR model . The unsupervised model is better suited to the numerous categorical features in our dataset ,such as airline and destination. Furthermore, we wanted to increase our training dataset size to 500,000 rows We decided to use K-Means clustering on the dataset after dimensionality reduction with PCA. Doing PCA before K-Means reduced the computational cost of training the mode, enabling us to use more data. To evaluate the separation of these clusters, a Support Vector Machine (SVM) was trained using the K-Means cluster assignments as labels. The resulting confusion matrix showed no false positives or false negatives which simply tells us that the SVM was able to exactly replicate the K-Means cluster assignments on the test set, suggesting that the clusters were linearly separable in the PCA-reduced feature space. This does not necessarily mean that the model perfectly predicts flight delays. Furthermore, the confusion matrix also revealed an imbalance between the two clusters, with one cluster containing substantially more data points than the other. This imbalance may reduce the interpretability and practical value of the clusters, as one group dominates the classification.
+
 ### 0.5.  Conclusion: This is where you do a mind dump on your opinions and possible future directions. Basically what you wish you could have done differently. Here you close with final thoughts. (3 points)
 
 All of our models performed well on both training and testing data. Our linear SVR models performed better than random guessing, with similarly reasonable test MSEs. Although a skew towards positive predictions may indicate feature imbalance, our unsupervised Support Vector Machine flawlessly replicated the K-Means cluster classification of the test set.
