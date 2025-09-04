@@ -126,7 +126,7 @@ Flight delays frequently spoil travel plans for even the savviest of flyers. Lat
 
 Your report should include relevant figures of your choosing to help with the narration of your story, including legends (similar to a scientific paper). For reference you search machine learning and your model in google scholar for reference examples. (3 points)
 
-### 0.2. Methods: This section will include the exploration results, preprocessing steps, models chosen in the order they were executed. You should also describe the parameters chosen. Please make sub-sections for every step. i.e Data Exploration, Preprocessing, Model 1, Model 2, additional models are optional. Please note that models can be the same i.e. DNN but different versions of it if they are distinct enough. Changes can not be incremental. You can put links here to notebooks and/or code blocks using three ` in markup for displaying code. so it would look like this: ``` MY CODE BLOCK ```
+### 0.2. Methods
 
 #### 0.2.1. Data Exploration
 
@@ -210,7 +210,7 @@ Silhouette score was calculated using 500,000 data and cluster label pairs. Thes
 
 Our linear support vector classifier achieved accuracy values of 1.0 for both training and test data. For predictions on test data, there were 97,939 true positives and 1,167 true negatives. 
 
-### 0.4. Discussion: This is where you will discuss the why, and your interpretation and your though process from beginning to end. This will mimic the sections you have created in your methods section as well as new sections you feel you need to create. You can also discuss how believable your results are at each step. You can discuss any short comings. It's ok to criticize as this shows your intellectual merit, as to how you are thinking about things scientifically and how you are able to correctly scrutinize things and find short comings. In science we never really find the perfect solution, especially since we know something will probably come up int he future (i.e. donkeys) and mess everything up. If you do it's probably a unicorn or the data and model you chose are just perfect for each other! (3 points)
+### 0.4. Discussion
 
 #### 0.4.1. Data Exploration
 
@@ -235,7 +235,7 @@ Informed by our data exploration and visualization, we first decided to use a re
 
 For our next model, we wanted to explore using some unsupervised clustering approaches to mitigate this issue with our SVR model . The unsupervised model is better suited to the numerous categorical features in our dataset ,such as airline and destination. Furthermore, we wanted to increase our training dataset size to 500,000 rows We decided to use K-Means clustering on the dataset after dimensionality reduction with PCA. Doing PCA before K-Means reduced the computational cost of training the mode, enabling us to use more data. To evaluate the separation of these clusters, a Support Vector Machine (SVM) was trained using the K-Means cluster assignments as labels. The resulting confusion matrix showed no false positives or false negatives which simply tells us that the SVM was able to exactly replicate the K-Means cluster assignments on the test set, suggesting that the clusters were linearly separable in the PCA-reduced feature space. This does not necessarily mean that the model perfectly predicts flight delays. Furthermore, the confusion matrix also revealed an imbalance between the two clusters, with one cluster containing substantially more data points than the other. This imbalance may reduce the interpretability and practical value of the clusters, as one group dominates the classification.
 
-### 0.5.  Conclusion: This is where you do a mind dump on your opinions and possible future directions. Basically what you wish you could have done differently. Here you close with final thoughts. (3 points)
+### 0.5.  Conclusion
 
 All of our models performed well on both training and testing data. Our linear SVR models performed better than random guessing, with similarly reasonable test MSEs. Although a skew towards positive predictions may indicate feature imbalance, our unsupervised Support Vector Machine flawlessly replicated the K-Means cluster classification of the test set.
 
@@ -245,7 +245,7 @@ As we did not generate PCA loadings, it is unclear which features provided the m
 
 Our insights were further constrained by limited attention to data visualization throughout the project. Our data visualizations tended to be crowded, poorly formatted, and unsuited to categorical data. In addition to isolating our data from its practical meaning, this is unsightly for readers. Had we rendered additional visualizations of our results, we may have been able to theorize about their contextual interpretations.
 
-### 0.6. Statement of Contribution by each member. This will be taken into consideration when making the final grade for each member in the group. Did you work as a team? was there a team leader? project manager? coding? writer? etc. Please be truthful about this as this will determine individual grades in participation. There is no job that is better than the other. If you did no code but did the entire write up and gave feedback during the steps and collaborated then you would still get full credit. If you only coded but gave feedback on the write up and other things, then you still get full credit. If you managed everyone and the deadlines and setup meetings and communicated with teaching staff only then you get full credit. Every role is important as long as you collaborated and were integral to the completion of the project. If the person did nothing. they risk getting a big fat 0. Just like in any job, if you did nothing, you have the risk of getting fired. Teamwork is one of the most important qualities in industry and academia! 
+### 0.6. Statements of Contribution 
 
 Jason Bulux: team leader, also contributed to meeting planning, ran notebook via SDSC, optimized cell blocks to improve kernel execution time, and helped giving feedback to writeups.
 
