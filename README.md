@@ -194,6 +194,20 @@ All in all, various features of the dataset showed interesting relationships, bu
 
 #### 0.3.2. Preprocessing Steps
 
+#### 0.3.3. Model 1
+Both variations of our SVR-based model implementation were evaluated using mean squared error (MSE) and R-squared. For clarity, this section and the subsequent one round all values of evaluation metrics to 4 decimal places. 
+
+The first variation (C=5, epsilon=0.001) yielded a training MSE of 0.0804 and a testing MSE of about 0.0709. This model's training value of r-squared was 0.9196. On testing data, r-squared was about 0.9291. 
+
+The second variation (C=50, epsilon=0.1) had a MSE of 0.0799 on its training data. On testing data, this model's MSE was close to 0.0703. Training r-squared was 0.9201, and testing r-squared was 0.9297. 
+
+#### 0.3.4. Model 2
+Our unsupervised learning model was evaluated using silhouette score for K-Means clusters, and mean accuracy for our linear Support Vector Classifier's final output. 
+
+Silhouette score was calculated using a random subset of 10,000 data and cluster label pairs. These clusters resulting from applying K-means to our principal components achieved a Silhouette Score of 0.7147. 
+
+Our linear support vector classifier achieved accuracy values of 1.0 for both training and test data. For predictions on test data, there were 97,939 true positives and 1,167 true negatives. 
+
 ### 0.4. Discussion: This is where you will discuss the why, and your interpretation and your though process from beginning to end. This will mimic the sections you have created in your methods section as well as new sections you feel you need to create. You can also discuss how believable your results are at each step. You can discuss any short comings. It's ok to criticize as this shows your intellectual merit, as to how you are thinking about things scientifically and how you are able to correctly scrutinize things and find short comings. In science we never really find the perfect solution, especially since we know something will probably come up int he future (i.e. donkeys) and mess everything up. If you do it's probably a unicorn or the data and model you chose are just perfect for each other! (3 points)
 
 #### 0.4.1. Data Exploration
