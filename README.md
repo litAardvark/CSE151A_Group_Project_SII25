@@ -226,9 +226,18 @@ Furthermore, variations in flight distance and durations by origin and destinati
 
 ### 0.5.  Conclusion: This is where you do a mind dump on your opinions and possible future directions. Basically what you wish you could have done differently. Here you close with final thoughts. (3 points)
 
+All of our models performed well on both training and testing data. Our linear SVR models performed better than random guessing, with similarly reasonable test MSEs. Although a skew towards positive predictions may indicate feature imbalance, our unsupervised Support Vector Machine flawlessly replicated the K-Means cluster classification of the test set.
+
+Given the accuracy of these models, the primary limitations of our project are model interpretability and presentation. 
+
+As we did not generate PCA loadings, it is unclear which features provided the most explanatory value. 
+
+Our insights were further constrained by limited attention to data visualization throughout the project. Our data visualizations tended to be crowded, poorly formatted, and unsuited to categorical data. In addition to isolating our data from its practical meaning, this is unsightly for readers. Had we rendered additional visualizations of our results, we may have been able to theorize about their contextual interpretations.
+
 ### 0.6. Statement of Contribution by each member. This will be taken into consideration when making the final grade for each member in the group. Did you work as a team? was there a team leader? project manager? coding? writer? etc. Please be truthful about this as this will determine individual grades in participation. There is no job that is better than the other. If you did no code but did the entire write up and gave feedback during the steps and collaborated then you would still get full credit. If you only coded but gave feedback on the write up and other things, then you still get full credit. If you managed everyone and the deadlines and setup meetings and communicated with teaching staff only then you get full credit. Every role is important as long as you collaborated and were integral to the completion of the project. If the person did nothing. they risk getting a big fat 0. Just like in any job, if you did nothing, you have the risk of getting fired. Teamwork is one of the most important qualities in industry and academia! 
 
-**Format: **If the person contributed nothing then just put in writing: Did not participate in the project. *(3 points)*
+
+Rosario Ortiz: contributed to meeting planning and note-taking, data preprocessing, data visualization and final writeup
 
 
 
