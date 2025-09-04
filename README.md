@@ -247,8 +247,10 @@ Our insights were further constrained by limited attention to data visualization
 
 ### 0.6. Statement of Contribution by each member. This will be taken into consideration when making the final grade for each member in the group. Did you work as a team? was there a team leader? project manager? coding? writer? etc. Please be truthful about this as this will determine individual grades in participation. There is no job that is better than the other. If you did no code but did the entire write up and gave feedback during the steps and collaborated then you would still get full credit. If you only coded but gave feedback on the write up and other things, then you still get full credit. If you managed everyone and the deadlines and setup meetings and communicated with teaching staff only then you get full credit. Every role is important as long as you collaborated and were integral to the completion of the project. If the person did nothing. they risk getting a big fat 0. Just like in any job, if you did nothing, you have the risk of getting fired. Teamwork is one of the most important qualities in industry and academia! 
 
+Jason Bulux: team leader, also contributed to meeting planning, ran notebook via SDSC, optimized cell blocks to improve kernel execution time, and helped giving feedback to writeups.
+
+Samuel Kogan: 
+I joined the project after the first week, I was lucky to be welcomed by this hard working team. Contributed on visualization, some discussion but mostly writeups.
 
 Rosario Ortiz: contributed to meeting planning and note-taking, data preprocessing, data visualization and final writeup
-
-Jason Bulux: team leader, also contributed to meeting planning, ran notebook via SDSC, optimized cell blocks to improve kernel execution time, and helped giving feedback to writeups.
 
