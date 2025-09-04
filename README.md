@@ -241,5 +241,5 @@ Our insights were further constrained by limited attention to data visualization
 
 Rosario Ortiz: contributed to meeting planning and note-taking, data preprocessing, data visualization and final writeup
 
-
+Jason Bulux: team leader, also contributed to meeting planning, ran notebook via SDSC, optimized cell blocks to improve kernel execution time, and helped giving feedback to writeups.
 
