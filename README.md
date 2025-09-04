@@ -254,3 +254,4 @@ I joined the project after the first week, I was lucky to be welcomed by this ha
 
 Rosario Ortiz: contributed to meeting planning and note-taking, data preprocessing, data visualization and final writeup
 
+DQ: Project manager, coder, gave strong feedback to our milestone approach, and also contributed to meeting planning.
