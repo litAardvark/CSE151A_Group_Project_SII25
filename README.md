@@ -118,7 +118,7 @@ To further improve the model we could try the following:
 - Add more features such as weather at origin and destination, whether certain dates are holidays
 - Try non-SVR models such as decision trees as previously mentioned
 
-- # CSE 151A Final Project
+# CSE 151A Final Project
 
 ### 0.1. Intro: Why was it chosen? Why is it cool? Discuss the general/broader impact of having a good predictive mode. i.e. why is this important? (3 points)
 
@@ -130,17 +130,9 @@ Your report should include relevant figures of your choosing to help with the na
 
 #### 0.2.1. Data Exploration
 
-Our exploratory data analysis revealed a broad dataset, including many airlines traveling all distances at all times of day from many cities of origin. 
+Methods used: 
 
-Distinct carriers showed some of the more marked differences. A few were outliers in terms of both delay and spread of flight dates. There were also large differences in popularity between airlines as proportion of flights. Without closer investigation, we assume this is explained by resource difference between carriers (e.g. international airlines vs small regional carriers). 
-
-Similarly, flights from a subset of origins and destinations had significantly longer flight times and distances than all others. This is likely due to the designation of international airports. 
-
-Distance had a slight positive correlation with departure delay, and a negative one with arrival delay. Given the small magnitude and contradictory nature of this correlation, it's unlikely to be meaningful for our overall analysis. 
-
-All in all, various features of the dataset showed interesting relationships, but none appeared very influential on arrival delay, our variable of interest. 
-
-### 0.3. Preprocessing Steps
+#### 0.2.2. Preprocessing Steps
 
 Our dataset, which initially contained about 7,000,000 rows of data, was sampled down to about 500,000 rows using pandas' `Dataframe.sample(frac=0.07, random_state=42)`.
 
@@ -154,17 +146,55 @@ Once encoded, all features were z-scored.
 
 *Note: A methods section does not include any why. the reason why will be in the discussion section. This is just a summary of your methods (5 points)*
 
-### 0.4. Order of Models
+#### 0.2.3. Model 1
 
-Our model trained on a limited subset of features including "FL_DATE", "CRS_DEP_TIME", "DEP_DELAY", "DISTANCE", and "CRS_ELAPSED_TIME."
+Our first model used SciKitLearn's Support Vector Regression with a linear kernel. Its training data consisted of a limited subset of features including "FL_DATE", "CRS_DEP_TIME", "DEP_DELAY", "DISTANCE", and "CRS_ELAPSED_TIME."
 
-Our first model was Support Vector Regression using a linear kernel. 
+We attempted two variations on this. In the first, our regularization parameter `C` was set to 5. The `epsilon` parameter was set to 0.001, meaning that our model was not penalized for predictions within this radius of ground truth training data. 
 
-### 0.5. Results: This will include the results from the methods listed above (C). You will have figures here about your results as well. No exploration of results is done here. This is mainly just a summary of your results. The sub-sections will be the same as the sections in your methods section. (5 points)
+The second variation followed the same SVR approach with modified parameters. It used weaker regularization (`C=50`), while setting a more forgiving `epsilon` value of 0.1. 
 
-#### 0.5.1. Discussion: This is where you will discuss the why, and your interpretation and your though process from beginning to end. This will mimic the sections you have created in your methods section as well as new sections you feel you need to create. You can also discuss how believable your results are at each step. You can discuss any short comings. It's ok to criticize as this shows your intellectual merit, as to how you are thinking about things scientifically and how you are able to correctly scrutinize things and find short comings. In science we never really find the perfect solution, especially since we know something will probably come up int he future (i.e. donkeys) and mess everything up. If you do it's probably a unicorn or the data and model you chose are just perfect for each other! (3 points)
+#### 0.2.4. Model 2
 
-#### 0.5.2.  Conclusion: This is where you do a mind dump on your opinions and possible future directions. Basically what you wish you could have done differently. Here you close with final thoughts. (3 points)
+Our second model used dimensional reduction and clustering techniques to enhance the predictions of a Support Vector Classifier. 
+
+It first entailed applying Principal Component Analysis to a DataFrame containing the same subset of features used to train Model 1. We sought to extract 6 principal components using SciKitLearn's PCA implementation. We used the `fit_transform` method, which trains the model and returns a dimensional reduction of training data. 
+
+SciKitLearn's KMeans implementation was applied to this dimensional reduction to identify 2 clusters. The `n-init` parameter was set to 10 in order to compare and select the optimal output from 10 sets of initial centroids. SciKitLearn bases this comparison on inertia. The algorithm parameter was also set to `elkan`. 
+
+### 0.3. Results: This will include the results from the methods listed above (C). You will have figures here about your results as well. No exploration of results is done here. This is mainly just a summary of your results. The sub-sections will be the same as the sections in your methods section. (5 points)
+
+#### 0.3.1. Data Exploration
+
+Our exploratory data analysis revealed a broad dataset, including many airlines traveling all distances at all times of day from many cities of origin. 
+
+Distinct carriers showed some of the more marked differences. A few were outliers in terms of both delay and spread of flight dates. There were also large differences in popularity between airlines as proportion of flights. 
+
+Similarly, flights from a subset of origins and destinations had significantly longer flight times and distances than all others.
+
+Distance had a slight positive correlation with departure delay, and a negative one with arrival delay. 
+
+All in all, various features of the dataset showed interesting relationships, but none appeared very influential on arrival delay, our variable of interest.
+
+#### 0.3.2. Preprocessing Steps
+
+### 0.4. Discussion: This is where you will discuss the why, and your interpretation and your though process from beginning to end. This will mimic the sections you have created in your methods section as well as new sections you feel you need to create. You can also discuss how believable your results are at each step. You can discuss any short comings. It's ok to criticize as this shows your intellectual merit, as to how you are thinking about things scientifically and how you are able to correctly scrutinize things and find short comings. In science we never really find the perfect solution, especially since we know something will probably come up int he future (i.e. donkeys) and mess everything up. If you do it's probably a unicorn or the data and model you chose are just perfect for each other! (3 points)
+
+#### 0.4.1. Data Exploration
+
+At first glance, our features did not display a clear correlation with flight delay. 
+
+Although distance was found to be correlated with both arrival and departure delay, these correlations were small and in contradictory directions. As such, they are unlikely to be meaningful to our overall analysis. 
+
+The relationships between features were largely explainable by air travel regulations and the general landscape of the commercial flight industry. 
+
+For example, carriers were differentiated by the spread of dates when flights were offered. Without closer investigation, it seems reasonable to conclude that these differences are explainable by the business size of each carrier. Large airlines operating in the United States generally offer flights year-round. By contrast, regional carriers operating smaller aircraft are more limited by seasonal weather changes.  
+
+Likewise, variation in the proportion of flights overseen by different carriers seems to be a natural result of market share differences. 
+
+Furthermore, variations in flight distance and durations by origin and destination city are likely due to the designation of international airports. 
+
+### 0.5.  Conclusion: This is where you do a mind dump on your opinions and possible future directions. Basically what you wish you could have done differently. Here you close with final thoughts. (3 points)
 
 ### 0.6. Statement of Contribution by each member. This will be taken into consideration when making the final grade for each member in the group. Did you work as a team? was there a team leader? project manager? coding? writer? etc. Please be truthful about this as this will determine individual grades in participation. There is no job that is better than the other. If you did no code but did the entire write up and gave feedback during the steps and collaborated then you would still get full credit. If you only coded but gave feedback on the write up and other things, then you still get full credit. If you managed everyone and the deadlines and setup meetings and communicated with teaching staff only then you get full credit. Every role is important as long as you collaborated and were integral to the completion of the project. If the person did nothing. they risk getting a big fat 0. Just like in any job, if you did nothing, you have the risk of getting fired. Teamwork is one of the most important qualities in industry and academia! 
 
