@@ -202,9 +202,9 @@ The first variation (C=5, epsilon=0.001) yielded a training MSE of 0.0804 and a 
 The second variation (C=50, epsilon=0.1) had a MSE of 0.0799 on its training data. On testing data, this model's MSE was close to 0.0703. Training r-squared was 0.9201, and testing r-squared was 0.9297. 
 
 #### 0.3.4. Model 2
-Our unsupervised learning model was evaluated using silhouette score for K-Means clusters, and mean accuracy for our linear Support Vector Classifier's final output. 
+Our unsupervised learning model was evaluated on 500,000 data points using silhouette score for K-Means clusters, and mean accuracy for our linear Support Vector Classifier's final output. 
 
-Silhouette score was calculated using a random subset of 10,000 data and cluster label pairs. These clusters resulting from applying K-means to our principal components achieved a Silhouette Score of 0.7147. 
+Silhouette score was calculated using 500,000 data and cluster label pairs. These clusters resulting from applying K-means to our principal components achieved a Silhouette Score of 0.7147. Our cluster visualizations, shown below, plot a random subset of 100,000 cluster-label pairs. 
 
 Our linear support vector classifier achieved accuracy values of 1.0 for both training and test data. For predictions on test data, there were 97,939 true positives and 1,167 true negatives. 
 
