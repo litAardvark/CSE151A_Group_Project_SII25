@@ -206,6 +206,8 @@ Our unsupervised learning model was evaluated on 500,000 data points using silho
 
 Silhouette score was calculated using 500,000 data and cluster label pairs. These clusters resulting from applying K-means to our principal components achieved a Silhouette Score of 0.7147. Our cluster visualizations, shown below, plot a random subset of 100,000 cluster-label pairs. 
 
+![K-Means Clusters shown for each combination of Principal Components](./figures/pca_kmeans.png)
+
 Our linear support vector classifier achieved accuracy values of 1.0 for both training and test data. For predictions on test data, there were 97,939 true positives and 1,167 true negatives. 
 
 ### 0.4. Discussion: This is where you will discuss the why, and your interpretation and your though process from beginning to end. This will mimic the sections you have created in your methods section as well as new sections you feel you need to create. You can also discuss how believable your results are at each step. You can discuss any short comings. It's ok to criticize as this shows your intellectual merit, as to how you are thinking about things scientifically and how you are able to correctly scrutinize things and find short comings. In science we never really find the perfect solution, especially since we know something will probably come up int he future (i.e. donkeys) and mess everything up. If you do it's probably a unicorn or the data and model you chose are just perfect for each other! (3 points)
